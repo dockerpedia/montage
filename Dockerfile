@@ -19,7 +19,7 @@ RUN mkdir -p /opt/montage/Montage_v3.3_patched_4/bin/ \
 	&& wget "https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagebins/mBackground"   \
 	&& wget "https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagebins/mBgModel" \
 	&& wget "https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagebins/mJPEG" \
-	&& chmod +x /opt/montage/Montage_v3.3_patched_4/bin/
+	&& chmod +x /opt/montage/Montage_v3.3_patched_4/bin/*
 
 RUN curl -SL https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagedata.tar.gz \
     | tar -xzC  .
