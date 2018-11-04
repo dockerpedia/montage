@@ -21,6 +21,5 @@ RUN mkdir -p /opt/montage/Montage_v3.3_patched_4/bin/ \
 	&& wget "https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagebins/mJPEG" \
 	&& chmod +x /opt/montage/Montage_v3.3_patched_4/bin/
 
-RUN mkdir -p montage \
-    && curl -SL https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagedata.tar.gz \
-    | tar -xzC  montage
+RUN curl -SL https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagedata.tar.gz \
+    | tar -xzC  .
