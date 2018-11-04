@@ -23,3 +23,5 @@ RUN mkdir -p /opt/montage/Montage_v3.3_patched_4/bin/ \
 
 RUN curl -SL https://raw.githubusercontent.com/rafaelfsilva/workflow-reproducibility/master/components/montage/montagedata.tar.gz \
     | tar -xzC  .
+
+USER root
