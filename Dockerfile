@@ -1,5 +1,17 @@
 FROM dockerpedia/pegasus_workflow_images:condor
 
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="Montage" \
+      org.label-schema.description="The Montage workflow was created by the NASA Infrared Processing and Analysis Center (IPAC) as an open source toolkit that can be used to generate custom mosaics of astronomical images in the Flexible Image Transport System (FITS) format" \
+      org.label-schema.url="http://montage.ipac.caltech.edu/" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/dockerpedia/montage" \
+      org.label-schema.vendor="DockerPedia" \
+      org.label-schema.version="1.0" \
+      org.label-schema.schema-version="1.0"
+
 WORKDIR /home/workflow
 USER root
 RUN apt-get update && apt-get install -y \
